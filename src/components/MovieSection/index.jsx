@@ -31,7 +31,7 @@ export default function MovieSection({ movies, slug, title }) {
                         movies !== [] && movies.map((movie, key) => {
                             return (
                                 <div className='movie_item' key={key}>
-                                    <Movie key={movie.id} img={movie.poster_path} />
+                                    <Movie key={movie.id} img={movie.poster_path} alt={movie.title}/>
                                 </div>
                             )
                         })
