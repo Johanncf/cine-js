@@ -1,40 +1,79 @@
 /* ======================== NAV ============================= */
 .page_header {
 	font-size: x-large;
-    margin: 30px 10px 100px 10px;
+    margin-bottom: 70px;
+    padding: 30px 10px 30px 10px;
 }
 
-
-.page_nav ul {
-	display: flex;
-	justify-content: flex-start;
-	color: var(--text-default);
-    gap: 30px;
+.page_nav { 
+    display: flex;
+    justify-content: space-between;
 }
 
-.page_nav button {
+.nav_list {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    width: 100%;
+    height: 100vh;
+}
+
+.show {
+    display: flex !important;
+}
+
+.nav-button {
 	background: none;
 	border: none;
 	cursor: pointer;
+    padding: 0;
 }
 
 .nav-item {
 	color: var(--text-default);
-    font-size: large;
+    font-size: 2.5rem;
     font-weight: bold;
     display: flex;
     align-items: center;
 }
 
-#logo-icon {
-    font-size: xx-large;
-    
+.logo-button {
+    display: none;
+    align-items: center;
+    color: var(--text-default);
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: none;
+	border: none;
+	cursor: pointer;
+    padding: 0;
+}
+
+.logo-icon,
+.menu-icon {
+    font-size: xxx-large;
+}
+
+.menu-button {
+    display: none;
+}
+
+.menu-open {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 10px;
 }
 
 .logo-name {
     color: var(--text-violet);
-
+    display: flex;
+    width: max-content;
 }
+
+
 /* ======================== MOVIE CONTAINER ============================= */
 .movie_section {
     padding-left: 30px;
@@ -54,7 +93,6 @@
 
 .movie_list {
     width: max-content;
-    margin-bottom: 50px;
     transition: 1s;
 }
 
@@ -106,3 +144,37 @@
 }
 
 
+/* ======================== MEDIA QUERIES ============================= */
+
+/* ======================== NAV BAR ============================= */
+@media screen and (max-width: 960px) {
+    
+    .menu-button {
+        display: block;
+    }
+
+    .movie_container {
+        overflow-x: scroll;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .page_nav { 
+        display: flex;
+    }
+
+    .nav_list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 30px;
+        width: 100%;
+        height: unset;
+        margin-left: 30px;
+    }
+
+    .logo-button {
+        display: flex;
+    }
+}

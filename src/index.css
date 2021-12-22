@@ -64,9 +64,6 @@ table {
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans&family=Roboto&display=swap');
 
-/* React Caroussel */
-@import "react-responsive-carousel/lib/styles/carousel.min.css";
-
 /* ======================== HTML ELEMENTS ============================= */
 
 body {
