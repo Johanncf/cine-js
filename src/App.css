@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+/* ======================== NAV ============================= */
+.page_header {
+	font-size: x-large;
+    margin: 30px 10px 100px 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.page_nav ul {
+	display: flex;
+	justify-content: flex-start;
+	color: var(--text-default);
+    gap: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.page_nav button {
+	background: none;
+	border: none;
+	cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-item {
+	color: var(--text-default);
+    font-size: large;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+#logo-icon {
+    font-size: xx-large;
+    
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo-name {
+    color: var(--text-violet);
+
 }
+/* ======================== MOVIE CONTAINER ============================= */
+.movie_section {
+    padding-left: 30px;
+    margin-bottom: 30px;
+    overflow-x: hidden;
+}
+
+.movie_container-title {
+    padding-bottom: 10px;
+    font-size: xx-large;
+}
+
+.movie_container {
+    padding-bottom: 10px;
+    font-size: xx-large;
+}
+
+.movie_list {
+    width: max-content;
+    margin-bottom: 50px;
+    transition: 1s;
+}
+
+.arrow_back,
+.arrow_forward {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.arrow_back {
+    left: 0;
+}
+
+.arrow_forward {
+    right: 0;
+}
+
+.movie_list:hover .arrow_forward,
+.movie_list:hover .arrow_back {
+    opacity: initial;
+}
+
+/* ======================== MOVIE CARD ============================= */
+
+
+.movie_item {
+    width: 200px; 
+    height: 300px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.movie_item img {
+    width: 100%;
+    height: 100%;
+    transform: scale(0.9);
+    transition: 0.2s;
+}
+
+.movie_item img:hover {
+    transform: scale(1);
+}
+
+
