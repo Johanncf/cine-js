@@ -24,7 +24,42 @@ const api = {
                 slug: 'comedy',
                 title: 'Comédia',
                 items: await basicFetch(`/discover/movie?api_key=${myKey}&language=pt-br&sort_by=popularity.desc&with_genres=35`)
-            }
+            },
+            {
+                slug: 'action',
+                title: 'Ação',
+                items: await basicFetch(`/discover/movie?api_key=${myKey}&language=pt-br&sort_by=popularity.desc&with_genres=28`)
+            },
+            {
+                slug: 'terror',
+                title: 'Terror',
+                items: await basicFetch(`/discover/movie?api_key=${myKey}&language=pt-br&sort_by=popularity.desc&with_genres=27`)
+            },
+            {
+                slug: 'romance',
+                title: 'Romance',
+                items: await basicFetch(`/discover/movie?api_key=${myKey}&language=pt-br&sort_by=popularity.desc&with_genres=10749`)
+            },
+            {
+                slug: 'war',
+                title: 'Guerra',
+                items: await basicFetch(`/discover/movie?api_key=${myKey}&language=pt-br&sort_by=popularity.desc&with_genres=10752`)
+            },
+            {
+                slug: 'sci-fi',
+                title: 'Ficção Científica',
+                items: await basicFetch(`/discover/movie?api_key=${myKey}&language=pt-br&sort_by=popularity.desc&with_genres=878`)
+            },
+            {
+                slug: 'fantasy',
+                title: 'Fantasia',
+                items: await basicFetch(`/discover/movie?api_key=${myKey}&language=pt-br&sort_by=popularity.desc&with_genres=14`)
+            },
+            {
+                slug: 'documentaty',
+                title: 'Documentários',
+                items: await basicFetch(`/discover/movie?api_key=${myKey}&language=pt-br&sort_by=popularity.desc&with_genres=99`)
+            },
         ]
     }
 }
