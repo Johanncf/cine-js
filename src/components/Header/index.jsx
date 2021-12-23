@@ -1,7 +1,7 @@
 import { BiCaretRightCircle } from "react-icons/bi";
 import { BiMenu, BiX } from "react-icons/bi";
 import { useState } from "react"
- 
+
 export default function Header() {
     const [display, setDisplay] = useState(false)
 
@@ -10,6 +10,7 @@ export default function Header() {
     }
 
     return (
+        <>
         <header className="page_header">
             <nav className="page_nav">
                 {/* <button className={!display ? 'logo-button show' : 'logo-button'}>
@@ -28,12 +29,13 @@ export default function Header() {
                         display ? <BiX className="menu-icon" /> : <BiMenu className="menu-icon" />
                     }
                 </button>
-                <ul className={display ? 'nav_list nav_list-show' : 'nav_list'}>
-                    <button className="nav-button"><li className="nav-item">Início</li></button>
-                    <button className="nav-button"><li className="nav-item">Séries</li></button>
-                    <button className="nav-button"><li className="nav-item">Filmes</li></button>
-                </ul>
             </nav>
+            <ul className={display ? 'nav_list nav_list-show' : 'nav_list'}>
+                <button className="nav-button"><li className="nav-item">Início</li></button>
+                <button className="nav-button"><li className="nav-item">Séries</li></button>
+                <button className="nav-button"><li className="nav-item">Filmes</li></button>
+            </ul>
         </header>
+            </>
     )
 }

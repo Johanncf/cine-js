@@ -56,6 +56,7 @@ table {
   --text-purple: rgb(32 17 91);
   --text-violet: rgb(114 50 242);
   --text-default: rgb(214 218 218)
+  
 }
 
 
@@ -71,5 +72,6 @@ body {
   color: var(--text-default);
   font-family: 'Roboto', sans-serif;
   position: relative;
+  -webkit-tap-highlight-color: transparent;
 }
 
