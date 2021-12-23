@@ -69,6 +69,7 @@ table {
 body {
   background: var(--bg-black);
   color: var(--text-default);
-  font-family: 'Roboto', sans-serif;;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
 }
 
