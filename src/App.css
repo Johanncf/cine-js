@@ -199,12 +199,13 @@
         justify-content: flex-start;
         column-gap: 30px;
         width: 100%;
-        position: fixed;
         height: auto;
         padding: 0;
         background: none;
+        position: fixed;
         top: 10px;
         left: 260px;
+        z-index: 999;
     }
 
     .logo-button {
