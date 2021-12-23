@@ -11,9 +11,9 @@ export default function Header() {
 
     return (
         <>
-        <header className="page_header">
-            <nav className="page_nav">
-                {/* <button className={!display ? 'logo-button show' : 'logo-button'}>
+            <header className="page_header">
+                <nav className="page_nav">
+                    {/* <button className={!display ? 'logo-button show' : 'logo-button'}>
                     <BiCaretRightCircle className="logo-icon" /><span className="logo-name">CINE JS</span>
                 </button>
                 <button className="nav-button nav-item menu-button" onClick={handleDisplay}>
@@ -21,21 +21,21 @@ export default function Header() {
                         display ? <BiX className="menu-icon menu-open" /> : <BiMenu className="menu-icon" />
                     }
                 </button> */}
-                <button className='logo-button'>
-                    <BiCaretRightCircle className="logo-icon" /><span className="logo-name">CINE JS</span>
-                </button>
-                <button className="nav-button nav-item menu-button" onClick={handleDisplay}>
-                    {
-                        display ? <BiX className="menu-icon" /> : <BiMenu className="menu-icon" />
-                    }
-                </button>
-            </nav>
+                    <button className='logo-button'>
+                        <BiCaretRightCircle className="logo-icon" /><span className="logo-name">CINE JS</span>
+                    </button>
+                    <button className="nav-button nav-item menu-button" onClick={handleDisplay}>
+                        {
+                            display ? <BiX className="menu-icon" /> : <BiMenu className="menu-icon" />
+                        }
+                    </button>
+                </nav>
+            </header>
             <ul className={display ? 'nav_list nav_list-show' : 'nav_list'}>
                 <button className="nav-button"><li className="nav-item">Início</li></button>
                 <button className="nav-button"><li className="nav-item">Séries</li></button>
                 <button className="nav-button"><li className="nav-item">Filmes</li></button>
             </ul>
-        </header>
-            </>
+        </>
     )
 }
