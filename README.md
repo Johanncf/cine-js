@@ -9,3 +9,5 @@
     <li>Consumo de API REST com <strong>fetch</strong></li>
     <li>Estilização dos componentes com <strong>styled-components</strong></li>
 </ul>
+
+<p>Você consegue ver o resultado <a href='cine-js.vercel.app'>clicando aqui</a>.</p>

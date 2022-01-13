@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import api from '../../dependencies/api'
-import Header from '../../components/Header';
 import ShowSection from '../../components/ShowSection';
 
 function Cine() {
