@@ -10,4 +10,4 @@
     <li>Estilização dos componentes com <strong>styled-components</strong></li>
 </ul>
 
-<p>Você consegue ver o resultado <a href='cine-js.vercel.app'>clicando aqui</a>.</p>
+<p>Você consegue ver o resultado <a href='https://cine-js-johanncf.vercel.app/'>clicando aqui</a>.</p>
