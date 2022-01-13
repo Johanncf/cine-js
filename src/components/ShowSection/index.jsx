@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Movie from '../Movie';
+import Show from '../Show';
 import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from 'react-icons/md'
 
-export default function MovieSection({ movies, slug, title }) {
+export default function ShowSection({ movies, slug, title }) {
     const [margin, setMargin] = useState(0)
 
     const scrollXleft = () => {
@@ -31,7 +31,7 @@ export default function MovieSection({ movies, slug, title }) {
                         movies !== [] && movies.map((movie, key) => {
                             return (
                                 <div className='movie_item' key={key}>
-                                    <Movie key={movie.id} img={movie.poster_path} alt={movie.title}/>
+                                    <Show key={movie.id} img={movie.poster_path} alt={movie.title}/>
                                 </div>
                             )
                         })

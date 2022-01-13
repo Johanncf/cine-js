@@ -1,33 +1,25 @@
 import './App.css';
 import Header from './components/Header';
-import MovieSection from './components/MovieSection';
-import api from './dependencies/api'
-import { useEffect, useState } from 'react'
+import Cine from './pages/Cine/Cine';
+import Filmes from './pages/Filmes/Filmes'
+import Login from './pages/Login/Login';
+import Series from './pages/Series/Series';
+
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
 
-  const [movies, setMovies] = useState([])
 
-  useEffect(() => {
-    const apiCall = async () => {
-      const res = await api.getHomeList()
-      setMovies(res)
-    }
-
-    apiCall()
-  }, [])
 
   return (
-    <div>
+    <>
       <Header />
-      <main className='main_container'>
-        {
-          movies.map((item, key) => {
-            return <MovieSection title={item.title} slug={item.slug} movies={item.items.results} key={key} />
-          })
-        }
-      </main>
-    </div>
+      <Routes>
+        <Route path='/' element={<Cine />}> </Route>
+        <Route path='/filmes' element={<Filmes />}></Route>
+        <Route path='/series' element={<Series />}></Route>
+      </Routes>
+    </>
   );
 }
 
