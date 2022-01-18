@@ -10,4 +10,4 @@
     <li>Estilização dos componentes com <strong>styled-components</strong></li>
 </ul>
 
-<p>Esta aplicação está atrelada ao back-end que desenvolvi com Python. O código python você pode acessar <a href='https://github.com/Johanncf/python-flask-REST_API'>clicando aqui</a>.</p>
+<p>Esta aplicação está atrelada ao back-end que desenvolvi com Python. O código python você pode acessar <a href='https://github.com/Johanncf/python-flask-REST_API'>clicando aqui</a>. <a href='https://www.linkedin.com/posts/johann-carlos-645bb7162_python-react-mysql-activity-6889176752220889089-Pp00'>Neste meu post do linkedin</a> você pode ver uma demonstração do projeto rodando localmente. Obrigado pelo interesse!</p>
