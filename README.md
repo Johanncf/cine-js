@@ -10,4 +10,4 @@
     <li>Estilização dos componentes com <strong>styled-components</strong></li>
 </ul>
 
-<p>Você consegue ver o resultado <a href='https://cine-js-johanncf.vercel.app/'>clicando aqui</a>.</p>
+<p>Esta aplicação está atrelada ao back-end que desenvolvi com Python. O código python você pode acessar <a href='https://github.com/Johanncf/python-flask-REST_API'>clicando aqui</a>.</p>
