@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { BiMenu, BiX, BiCaretRightCircle } from "react-icons/bi";
+import { BiMenu, BiX, BiCaretRightCircle, BiSearchAlt2 } from "react-icons/bi";
 
 const Menu = styled.header`
     display: flex;
-    margin-bottom: 70px;
     padding: 10px;
     width: 100%;
     position: fixed;
+    top: 0;
     z-index: 999;
     background: ${props => props.bg};
-    height: 5vh;
+    height: 8vh;
 `;
 
 const Nav = styled.nav`
@@ -22,7 +22,7 @@ const Nav = styled.nav`
     z-index: 999;
 `;
 
-const LogoButton = styled.button`
+const LogoButton = styled(Link)`
     display: flex;
     align-items: center;
     
@@ -39,18 +39,140 @@ const LogoButton = styled.button`
 `;
 
 const LogoIcon = styled(BiCaretRightCircle)`
-    font-size: 1.8rem;
+    font-size: 2.8rem;
 `;
 
-const LogoName = styled(Link)`
+const LogoName = styled.span`
     color: rgb(114 50 242);
     display: flex;
     width: max-content;
     font-family: 'Bangers', cursive;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     text-decoration: none;
 `;
 
+const ButtonsContainer = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 10px;
+`;
+
+const SearchButton = styled(BiSearchAlt2)`
+    display: flex;
+    align-items: center;
+
+    background: none;
+	border: none;
+    padding: 0;
+
+    color: rgb(214 218 218);
+    font-size: 1.5rem;
+    font-weight: 400;
+	
+    cursor: pointer;
+
+    @media screen and (min-width: 960px) {
+        display: none;
+    }
+`;
+
+const BigSearchButton = styled(BiSearchAlt2)`
+    display: flex;
+    align-items: center;
+
+    background: none;
+	border: none;
+    padding: 0;
+
+    color: rgb(214 218 218);
+    font-size: 1.5rem;
+    font-weight: 400;
+	
+    cursor: pointer;
+
+    @media screen and (max-width: 960px) {
+        display: none;
+    }
+`;
+
+const SearchField = styled.div`
+    border: ${props => props.$display ? '1px solid rgb(214 218 218)' : 'none'};
+    padding: 3px;
+
+    transition: width 2s ease;
+
+    display: flex;
+`;
+
+const BigSearchField = styled.div`
+    border: 1px solid rgb(214 218 218);
+    padding: 3px;
+
+    transition: width 2s ease;
+
+    display: flex;
+
+    @media screen and (max-width: 960px) {
+        display: none;
+    }
+`;
+
+const SearchInput = styled.input`
+    display: ${props => props.$display ? 'block' : 'none'};
+
+    background: none;
+    border: none;
+
+    color: rgb(214 218 218);
+    caret-color: rgb(214 218 218);
+
+    :focus {
+        outline: none;  
+    }
+`;
+
+const BigSearchInput = styled.input`
+    background: none;
+    border: none;
+
+    color: rgb(214 218 218);
+    caret-color: rgb(214 218 218);
+
+    :focus {
+        outline: none;  
+    }
+
+    @media screen and (max-width: 960px) {
+        display: none;
+    }
+`;
+
+const MenuButton = styled.button`
+    display: flex;
+    align-items: center;
+
+    background: none;
+    border: none;
+    padding: 0;
+
+    color: rgb(214 218 218);
+    font-size: 1.5rem;
+    font-weight: 400;
+    
+    cursor: pointer;
+
+    @media screen and (min-width: 960px) {
+        display: none;
+    }
+`;
+
+const OpenMenuIcon = styled(BiMenu)`
+    font-size: 1.8rem;
+`;
+
+const CloseMenuIcon = styled(BiX)`
+    font-size: 1.8rem;
+`;
 const MenuList = styled.ul`
     display: flex;
     flex-direction: column;
@@ -77,7 +199,7 @@ const MenuList = styled.ul`
         padding: 0;
         background: none;
         position: fixed;
-        top: 1.4vh;
+        top: 3vh;
         right: 10px;
         z-index: 999;
     }
@@ -95,32 +217,6 @@ const Anchor = styled(Link)`
     font-weight: 400;
 `;
 
-const MenuButton = styled.button`
-    display: flex;
-    align-items: center;
-
-    background: none;
-	border: none;
-    padding: 0;
-
-    color: rgb(214 218 218);
-    font-size: 1.5rem;
-    font-weight: 400;
-	
-    cursor: pointer;
-
-    @media screen and (min-width: 960px) {
-        display: none;
-    }
-`;
-
-const OpenMenuIcon = styled(BiMenu)`
-    font-size: 1.8rem;
-`;
-
-const CloseMenuIcon = styled(BiX)`
-    font-size: 1.8rem;
-`;
 
 export {
     Menu,
@@ -128,6 +224,13 @@ export {
     LogoIcon,
     LogoName,
     Nav,
+    ButtonsContainer,
+    SearchButton,
+    BigSearchButton,
+    SearchField,
+    BigSearchField,
+    SearchInput,
+    BigSearchInput,
     MenuList,
     MenuItem,
     MenuButton,

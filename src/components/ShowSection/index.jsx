@@ -2,6 +2,8 @@ import { useState } from 'react';
 import Show from '../Show';
 import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from 'react-icons/md'
 
+
+
 export default function ShowSection({ movies, slug, title }) {
     const [margin, setMargin] = useState(0)
 
@@ -31,7 +33,7 @@ export default function ShowSection({ movies, slug, title }) {
                         movies !== [] && movies.map((movie, key) => {
                             return (
                                 <div className='movie_item' key={key}>
-                                    <Show key={movie.id} img={movie.poster_path} alt={movie.title}/>
+                                    <Show key={movie.id} img={movie.poster_path} show_id={movie.id} alt={movie.title}/>
                                 </div>
                             )
                         })

@@ -30,9 +30,29 @@ const api = {
                 items: await basicFetch(`/discover/movie?api_key=${myKey}&language=pt-br&sort_by=popularity.desc&with_genres=10749&include_adult=false`)
             },
             {
+                slug: 'action',
+                title: 'Filmes de ação',
+                items: await basicFetch(`/discover/movie?api_key=${myKey}&language=pt-br&sort_by=popularity.desc&with_genres=28&include_adult=false`)
+            },
+            {
+                slug: 'terror',
+                title: 'Filmes de terror',
+                items: await basicFetch(`/discover/movie?api_key=${myKey}&language=pt-br&sort_by=popularity.desc&with_genres=27&include_adult=false`)
+            },
+            {
                 slug: 'fantasy',
                 title: 'Filmes de ficção fantástica',
                 items: await basicFetch(`/discover/movie?api_key=${myKey}&language=pt-br&sort_by=popularity.desc&with_genres=14&include_adult=false`)
+            },
+            {
+                slug: 'sci-fi',
+                title: 'Filmes de ficção Científica',
+                items: await basicFetch(`/discover/movie?api_key=${myKey}&language=pt-br&sort_by=popularity.desc&with_genres=878&include_adult=false`)
+            },
+            {
+                slug: 'war',
+                title: 'Filmes de guerra',
+                items: await basicFetch(`/discover/movie?api_key=${myKey}&language=pt-br&sort_by=popularity.desc&with_genres=10752&include_adult=false`)
             },
             {
                 slug: 'documentaty',
@@ -46,7 +66,7 @@ const api = {
         return [
             {
                 slug: 'toprated',
-                title: 'Filmes em destaque',
+                title: 'Em destaque no Cine JS',
                 items: await basicFetch(`/discover/movie?api_key=${myKey}&language=pt-br&sort_by=popularity.desc&include_adult=false`)
             },
             {
@@ -114,11 +134,6 @@ const api = {
                 items: await basicFetch(`/discover/tv?api_key=${myKey}&language=pt-br&sort_by=popularity.desc&with_genres=10749`)
             },
             {
-                slug: 'war',
-                title: 'Guerra',
-                items: await basicFetch(`/discover/tv?api_key=${myKey}&language=pt-br&sort_by=popularity.desc&with_genres=10752`)
-            },
-            {
                 slug: 'Sci-Fi & Fantasy',
                 title: 'Ficção Científica',
                 items: await basicFetch(`/discover/tv?api_key=${myKey}&language=pt-br&sort_by=popularity.desc&with_genres=10765`)
@@ -129,7 +144,7 @@ const api = {
                 items: await basicFetch(`/discover/tv?api_key=${myKey}&language=pt-br&sort_by=popularity.desc&with_genres=99`)
             },
         ]
-    }
+    },
 
 }
 

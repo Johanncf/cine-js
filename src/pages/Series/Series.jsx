@@ -1,30 +1,34 @@
+import { MainContainer } from '../main.styled.elements';
+
 import { useEffect, useState } from 'react'
 import api from '../../dependencies/api'
 import ShowSection from '../../components/ShowSection';
 
+import { useNavigate } from "react-router-dom"
+import isAuthenticated from '../../utils/auth';
+
 function Series() {
-    const [series, setSeries] = useState([])
+  const redirect = useNavigate()
+  const [series, setSeries] = useState([])
 
-    useEffect(() => {
-        const apiCall = async () => {
-            const res = await api.getSerieList()
-            setSeries(res)
-        }
+  useEffect(() => {
+    const apiCall = async () => {
+      const res = await api.getSerieList()
+      setSeries(res)
+    }
 
-        apiCall()
-    }, [])
+    isAuthenticated() ? apiCall() : redirect('/login')
+  }, [redirect])
 
-    return (
-        <div>
-          <main className='main_container'>
-            {
-              series.map((item, key) => {
-                return <ShowSection title={item.title} slug={item.slug} movies={item.items.results} key={key} />
-              })
-            }
-          </main>
-        </div>
-      );
+  return (
+    <MainContainer>
+      {
+        series.map((item, key) => {
+          return <ShowSection title={item.title} slug={item.slug} movies={item.items.results} key={key} />
+        })
+      }
+    </MainContainer>
+  );
 }
 
 export default Series;
